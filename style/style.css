@@ -55,13 +55,14 @@ body {
     color: white;
     line-height: 19px;
     margin: 0 17px;
-    transition: color 500ms;
+    transition: 200ms;
     padding-bottom: 23px;
+    border-bottom: 2px solid transparent;
 }
 
 .header__nav-link:hover {
     color: #FFE600;
-    border-bottom: 2px solid white;
+    border-color: white;
 }
 
 .header__content {
@@ -128,6 +129,9 @@ body {
     max-width: 350px;
     width: 100%;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .item img {
     border-radius: 3px;
@@ -185,13 +189,11 @@ body {
 }
 
 .main__product-left {
-    max-width: 900px;
+    width: 50%;
     padding: 80px 100px;
 }
 
-.main__product-right {
-    width: 50%;
-}
+
 
 
 .product__left-info {
@@ -253,7 +255,7 @@ body {
 
 .main__product-right {
     flex-grow: 1;
-    min-width: 500px;
+    width: 50%;
 }
 .product__img-top img {
     width: 100%;
@@ -288,6 +290,8 @@ body {
     background: white;
     max-width: calc(100% / 4 - 30px);
     margin: 0 15px;
+    display: flex;
+    flex-direction: column;
 }
 .main__snickers-item img {
     display: block;
@@ -295,6 +299,10 @@ body {
 }
 .main__snickers-info {
     padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .main__snickers-item h2 {
     font-family: 'RB';
@@ -423,13 +431,14 @@ body {
     color: white;
     line-height: 19px;
     margin: 0 17px;
-    transition: color 500ms;
+    transition:  200ms;
     padding-bottom: 20px;
+    border-bottom: 2px solid transparent;
 }
 
 .footer__nav-link:hover {
     color: #FFE600;
-    border-bottom: 2px solid white;
+    border-color: white;
 }
 
 .footer__text {
@@ -450,11 +459,7 @@ body {
 /* Media start */
 
 
-@media(max-width:1800px) {
-    .main__product-left{
-        max-width: 100%;
-    }
-}
+
 
 @media(max-width:1110px) {
     .item {
@@ -476,6 +481,18 @@ body {
     }
     .main__style-item{
         margin-bottom: 40px;
+    }
+    .main__product{
+        flex-direction: column-reverse;
+    }
+    .main__product-right{
+        width: 100%;
+    }
+    .main__product-left {
+        width: 100%;
+    }
+    .main__product-btns{
+        justify-content: center;
     }
 }
 
